@@ -2,8 +2,6 @@ name: Task 2
 run-name: Runing Tests for desktop-app  🚀
 on:
   pull_request:
-    types: [opened]
-  push:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
