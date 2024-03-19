@@ -1,0 +1,14 @@
+name: Task 3
+run-name: Runing Tests for desktop-app  🚀🚀🚀
+on:
+  push:
+    paths:
+      - "desktop-app/**.ts"
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: cd ./desktop-app/ && npm ci && npm test
