@@ -11,7 +11,7 @@ function App() {
   const numB = b ? parseFloat(b) : 0;
 
   const result = sum(numA, numB);
-
+  // Change made
   return (
     <Stack spacing={4}>
       <Stack direction="row" spacing={2} alignItems="center">

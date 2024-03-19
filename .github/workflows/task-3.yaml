@@ -1,7 +1,9 @@
-name: Task 2
-run-name: Runing Tests for desktop-app  🚀
+name: Task 3
+run-name: Runing Tests for desktop-app  🚀🚀🚀
 on:
-  pull_request:
+  push:
+    paths:
+      - desktop-app/**.tsx?
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
