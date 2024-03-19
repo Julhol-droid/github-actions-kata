@@ -6,3 +6,4 @@ export const AMAZONS = [
   { name: "Francja", url: "https://www.amazon.fr" },
   { name: "Hiszpania", url: "https://www.amazon.es" },
 ];
+// Types ?
