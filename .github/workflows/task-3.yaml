@@ -3,7 +3,7 @@ run-name: Runing Tests for desktop-app  🚀🚀🚀
 on:
   push:
     paths:
-      - "desktop-app/**.ts"
+      - desktop-app/**.tsx?
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
