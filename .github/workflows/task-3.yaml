@@ -1,7 +1,7 @@
 name: Task 3
 run-name: Runing Tests for desktop-app  🚀🚀🚀
 on:
-  push:
+  pull_request:
     paths:
       - desktop-app/**.tsx?
 jobs:

@@ -1,0 +1,21 @@
+name: Task 4
+run-name: Runing E2E Tests for desktop-app  🚀🚀🚀🚀
+on:
+  pull_request:
+    paths:
+      - desktop-app/**
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: cd ./desktop-app/ && npm ci && npm test
+      - run: cd  ./desktop-app/ && xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- npm run e2e
+      - name: Archive test screenshots artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: desktop-app/test-results/**/**.png
